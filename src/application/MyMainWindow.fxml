@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane style="-fx-background-image: url('http://2.bp.blogspot.com/-CmBgofK7QzU/TVj3u3N1h2I/AAAAAAAADN8/OszBhGvvXRU/s640/tumblr_lg7h9gpbtP1qap9qio1_500.jpeg');" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="CENTER" layoutY="40.0" prefHeight="460.0" prefWidth="634.0" style="-fx-background-color: linear-gradient(#004000,#0B2100);;" stylesheets="@application.css">
+         <children>
+            <ToggleButton mnemonicParsing="false" prefHeight="285.0" prefWidth="628.0" />
+            <Button mnemonicParsing="false" onAction="#handleButtonAction" text="LoadImage" />
+         </children>
+      </VBox>
+      <HBox alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="1000.0" style="-fx-background-color: #6e6e6e;">
+         <children>
+            <HBox prefHeight="20.0" prefWidth="836.0">
+               <children>
+                  <MenuButton mnemonicParsing="false" text="Menu">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="options" />
+                      <MenuItem mnemonicParsing="false" text="Quit" />
+                    </items>
+                  </MenuButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="212.0">
+               <children>
+                  <Button fx:id="closeButton" mnemonicParsing="false" onAction="#handleExitButtonAction" text="X" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="693.0" layoutY="177.0" prefHeight="460.0" prefWidth="366.0" stylesheets="@application.css" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+         <children>
+            <ImageView fitHeight="387.0" fitWidth="281.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Dropbox/Vox%20Machina%20Material/Maps/PDF%20Map-1.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>
