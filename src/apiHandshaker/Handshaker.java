@@ -12,12 +12,14 @@ import java.awt.Desktop;
 import javax.net.ssl.HttpsURLConnection;
 
 
+
 public class Handshaker {
 	
 	public static void main(String[] args) throws Exception
 	{
 		Handshaker shake = new Handshaker();
-		System.out.println("Testing 1 - Send Http GET request");
+		
+	 	System.out.println("Testing 1 - Send Http GET request");
 		shake.requestToken();
 		System.out.println("Enter Code:");
 		Scanner scan = new Scanner(System.in);
@@ -40,6 +42,16 @@ public class Handshaker {
 		System.out.println(splitlist[splitlist.length-2]);
 		
 		shake.sendGet(splitlist[splitlist.length-2]);
+		
+		//shake.openContent();
+	}
+
+	private void openContent() throws Exception
+	{
+		String url = "https://onedrive.live.com/redir.aspx?cid=81a492a44e03085b&page=edit&resid=81A492A44E03085B!915&parId=81A492A44E03085B!110&wd=target%28Feats%2FGeneral%20Feats.one%7C196ee40d-2c42-49ff-a15a-ffa26be07602%2FObservant%7C9ce109a2-d370-49bf-9c9f-c8692c94065b%2F%29";
+		URI uri = new URI(url);
+		Desktop d = Desktop.getDesktop();
+		d.browse(uri);
 	}
 
 	private void requestToken() throws Exception
@@ -59,7 +71,7 @@ public class Handshaker {
 	
 	private void sendGet(String accessToken) throws Exception {
 
-		String url = "https://graph.microsoft.com/v1.0/me/onenote/sections";
+		String url = "https://graph.microsoft.com/v1.0/me/onenote/pages";
 		URL obj = new URL(url);
 		HttpsURLConnection con = (HttpsURLConnection) obj.openConnection();
 
